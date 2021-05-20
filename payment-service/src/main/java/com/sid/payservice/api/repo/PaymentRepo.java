@@ -6,4 +6,6 @@ import com.sid.payservice.api.model.Payment;
 
 public interface PaymentRepo  extends JpaRepository<Payment, Integer>{
 
+	Payment findByOrderId(int orderId);
+
 }

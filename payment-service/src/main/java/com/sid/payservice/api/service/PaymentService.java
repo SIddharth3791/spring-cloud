@@ -18,5 +18,9 @@ public class PaymentService {
 		payment.setTransactionId(UUID.randomUUID().toString());
 		return repo.save(payment);
 	}
+	
+	public Payment findPayByOrderId(int orderId) {
+		return repo.findByOrderId(orderId);
+	}
 
 }
